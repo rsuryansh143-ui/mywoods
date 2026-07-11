@@ -1,16 +1,61 @@
-# React + Vite
+# 🌿 MyWoods
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack web application for exploring and managing wood types.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+mywoods/
+├── frontend/       # React + Vite frontend
+│   ├── src/
+│   │   ├── components/   # Reusable UI components
+│   │   ├── features/     # Page-level feature components
+│   │   ├── routes/       # Route definitions
+│   │   ├── layout/       # Layout wrappers
+│   │   ├── utils/        # Utility functions
+│   │   └── sampleData/   # Static/sample data
+│   ├── public/           # Static assets (images, icons)
+│   ├── index.html
+│   ├── vite.config.js
+│   └── package.json
+│
+└── backend/        # Node.js + Express + MongoDB API
+    ├── config/     # Database config
+    ├── middleware/ # Auth middleware
+    ├── models/     # Mongoose models
+    ├── routes/     # API routes
+    ├── server.js
+    └── package.json
+```
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- **React 19** with Vite
+- **React Router DOM v7** for routing
+- **Bootstrap 5** + React Bootstrap for UI
+- **React Icons** for iconography
 
-## Expanding the Oxlint configuration
+### Backend
+- **Node.js** + **Express** REST API
+- **MongoDB Atlas** via Mongoose
+- **JWT** authentication
+- **Helmet** + **rate-limit** for security
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting Started
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+> Make sure to add a `.env` file in the `backend/` folder (see `.env.example` if available).
