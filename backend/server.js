@@ -31,6 +31,11 @@ app.use(limiter);
 // Body parser
 app.use(express.json());
 
+// Health check / root route
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "ok", message: "MyWoods API is running 🌲" });
+});
+
 // Mount routers
 app.use("/api/auth", authRoutes);
 app.use("/api/woods", woodsRoutes);
