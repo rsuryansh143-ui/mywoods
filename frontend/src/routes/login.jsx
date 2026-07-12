@@ -21,7 +21,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setToken } from "../utils/auth";
 
-const BASE = "/api/auth";
+const BASE = `${import.meta.env.VITE_API_URL || ""}/api/auth`;
 
 export default function AuthPage() {
   const navigate = useNavigate();

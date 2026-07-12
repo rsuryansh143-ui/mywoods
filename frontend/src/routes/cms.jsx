@@ -39,7 +39,7 @@ import { useNavigate } from "react-router-dom";
 import { getToken, clearToken } from "../utils/auth";
 
 // ── Constants ──────────────────────────────────────────────────
-const API = "/api/woods";
+const API = `${import.meta.env.VITE_API_URL || ""}/api/woods`;
 
 const TYPES = ["hardwood", "softwood", "engineered", "other"];
 
